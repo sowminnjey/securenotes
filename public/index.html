@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang='fr'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>SecureNotes</title>
+  <link rel='stylesheet' href='/style.css'>
+</head>
+<body>
+  <main>
+    <h1>SecureNotes</h1>
+
+    <section id='auth'>
+      <form id='auth-form'>
+        <input id='email' type='email' placeholder='Email' required autocomplete='username'>
+        <input id='password' type='password' placeholder='Mot de passe (10 caractères min)' required autocomplete='current-password'>
+        <button type='submit'>Connexion</button>
+        <button type='button' id='register'>Créer un compte</button>
+      </form>
+      <p id='msg' role='alert'></p>
+    </section>
+
+    <section id='app' hidden>
+      <button id='logout'>Déconnexion</button>
+      <form id='note-form'>
+        <input id='title' maxlength='100' placeholder='Titre' required>
+        <textarea id='content' maxlength='5000' placeholder='Contenu' required></textarea>
+        <button type='submit'>Ajouter</button>
+      </form>
+      <ul id='notes'></ul>
+    </section>
+  </main>
+  <script src='/app.js' type='module'></script>
+</body>
+</html>
